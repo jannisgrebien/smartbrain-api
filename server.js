@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(cors());
 
 
-const port = 3000;
+const PORT = process.env.PORT;
 
 
 
@@ -61,7 +61,7 @@ app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
 
 
 
-app.listen(port,()=> {
-    console.log(`app is running on port ${port}`);
+app.listen(PORT || 3000,()=> {
+    console.log(`app is running on port ${PORT}`);
 })
 
