@@ -50,6 +50,10 @@ app.put('/image', image.handleImage(db))
 
 
 
+app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
+
+
+
 
 
 
